@@ -1,0 +1,82 @@
+.todo-card {
+  width: 430px;
+
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+.header {
+  width: 430px;
+  height: 202px;
+  position: relative;
+}
+.date {
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  position: absolute;
+  top: 114px;
+  left: 342px;
+}
+.date:focus {
+  color: blue;
+}
+.time {
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  color: #ffffff;
+  position: absolute;
+  top: 131px;
+  left: 210px;
+}
+.input-box {
+  margin: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  width: 279px;
+  height: 49px;
+  border-radius: 5px;
+  background: #ebeff2;
+  border: none;
+  background-image: url("./images/akar-icons_circle-1.png");
+  background-position: left;
+  background-position-x: 10px;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+button {
+  background-color: #20eeb0;
+  width: 88px;
+  height: 49px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.todo-item {
+  display: flex;
+  margin: 8px 30px 12px 29px;
+  justify-content: space-between;
+}
+h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0d0d0d;
+}
+.bin {
+  margin-left: 18px;
+  cursor: pointer;
+}
+
+.checked {
+  cursor: pointer;
+}
