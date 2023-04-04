@@ -15,3 +15,13 @@ h1 {
   line-height: 116px;
   color: #007fdb;
 }
+@media screen and (max-width: 980px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    margin: 30px 0;
+  }
+}
