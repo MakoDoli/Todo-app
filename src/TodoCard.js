@@ -6,17 +6,13 @@ import { useState } from "react";
 import empty from "./images/emptycircle.png";
 import checked from "./images/akar-icons_circle-1.png";
 
-// let taskList = [];
-
 export function TodoCard() {
-  // const [active, setActive] = useState(true);
-  let active = true;
   const [taskList, setTaskList] = useState([]);
 
   function showInput() {
     const userInput = document.getElementById("input");
 
-    setTaskList([...taskList, { task: userInput.value, check: active }]);
+    setTaskList([{ task: userInput.value, active: false }, ...taskList]);
 
     userInput.value = "";
   }
@@ -35,10 +31,10 @@ export function TodoCard() {
             <TodoItem
               key={index}
               content={elem.task}
-              src={elem.check ? empty : checked}
+              src={elem.active ? checked : empty}
               handler={() => {
                 const updatedTaskList = [...taskList];
-                updatedTaskList[index].check = !elem.check;
+                updatedTaskList[index].active = !elem.active;
                 setTaskList(updatedTaskList);
               }}
               handleRemove={() => {
