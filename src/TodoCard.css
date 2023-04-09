@@ -1,6 +1,5 @@
 .todo-card {
   width: 430px;
-
   background-color: white;
   border-radius: 10px 10px 0px 0px;
 }
@@ -74,10 +73,9 @@ h2 {
 }
 .bin {
   margin-left: 18px;
-  cursor: pointer;
 }
 
-.checked {
+.checked,
+.bin {
   cursor: pointer;
 }
-

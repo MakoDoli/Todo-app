@@ -8,20 +8,29 @@ import checked from "./images/akar-icons_circle-1.png";
 
 export function TodoCard() {
   const [taskList, setTaskList] = useState([]);
+  const [newInput, setNewInput] = useState(null);
+  const [placeholder, setPlaceholder] = useState("Note");
 
   function showInput() {
-    const userInput = document.getElementById("input");
-
-    setTaskList([{ task: userInput.value, active: false }, ...taskList]);
-
-    userInput.value = "";
+    if (newInput) {
+      setTaskList([{ task: newInput, active: false }, ...taskList]);
+      setPlaceholder("Note");
+    } else {
+      setPlaceholder("Enter your note here");
+    }
+    setNewInput("");
   }
 
   return (
     <div className="todo-card">
       <Header />
       <div className="input-box">
-        <input id="input" placeholder="Note"></input>
+        <input
+          id="input"
+          placeholder={placeholder}
+          value={newInput}
+          onChange={(e) => setNewInput(e.target.value)}
+        ></input>
         <button onClick={showInput}>
           <img src={plus} alt="add"></img>
         </button>
