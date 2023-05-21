@@ -7,9 +7,10 @@ import empty from "./images/emptycircle.png";
 import checked from "./images/akar-icons_circle-1.png";
 
 export function TodoCard() {
-  const [taskList, setTaskList] = useState(
-    JSON.parse(localStorage.getItem("taskList"))
-  );
+  const initialList = localStorage.getItem("taskList")
+    ? JSON.parse(localStorage.getItem("taskList"))
+    : [];
+  const [taskList, setTaskList] = useState(initialList);
   const [newInput, setNewInput] = useState(null);
   const [placeholder, setPlaceholder] = useState("Note");
   const [lastAdded, setLastAdded] = useState(localStorage.getItem("lastAdded"));
