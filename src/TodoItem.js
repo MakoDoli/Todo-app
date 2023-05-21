@@ -2,7 +2,10 @@ import bin from "./images/Vector.png";
 export function TodoItem(props) {
   return (
     <div className="todo-item">
-      <h2>{props.content}</h2>
+      <div>
+        <h2>{props.content}</h2>
+        <p>{props.time}</p>
+      </div>
       <div>
         <img
           className="checked"

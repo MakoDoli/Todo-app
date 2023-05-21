@@ -71,6 +71,15 @@ h2 {
   line-height: 22px;
   color: #0d0d0d;
 }
+p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: grey;
+  margin-top: 8px;
+}
 .bin {
   margin-left: 18px;
 }
