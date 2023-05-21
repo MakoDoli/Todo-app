@@ -11,7 +11,7 @@ export function TodoCard() {
 
   const initialList = JSON.parse(localStorage.getItem("taskList"))
     ? JSON.parse(localStorage.getItem("taskList"))
-    : "[]";
+    : [];
   const [taskList, setTaskList] = useState(initialList);
   const [newInput, setNewInput] = useState(null);
   const [placeholder, setPlaceholder] = useState("Note");
